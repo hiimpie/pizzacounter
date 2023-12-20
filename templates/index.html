@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="block">    
+    <!-- Progress Bar -->
+    <div class="progress-bar-container">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+    <div class="txt">
+        <div class="header">
+            <img src="{{ url_for('static', filename='pizzahouse.svg') }}"/>
+        <p>Pizza Counter</p>
+        </div>
+    <h2><span id="clickCount">{{ click_count }}</span> pizzas</h2>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+    
+        socket.on('update_click_count', function(data) {
+            // Format the number with commas
+            var formattedClickCount = data.click_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    
+            document.getElementById('clickCount').textContent = formattedClickCount;
+    
+            // Update the progress bar
+            var progressBar = document.getElementById('progressBar');
+            var progressPercentage = (data.click_count / 100000) * 100;
+            progressBar.style.width = progressPercentage + '%';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+html, body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    color: white;
+    user-select: none;
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+h2 {
+    margin-top: 5px;
+}
+.block {
+    background-color: #00069C;
+    display: block;
+    border-radius: 20px;
+    margin: 10px;
+    width: 250px;
+    overflow: hidden;
+    box-shadow: 5px 5px #3498db;
+}
+.txt {
+    padding: 10px;
+}
+.progress-bar-container {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    height: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #3498db;
+    width: 0; /* Initial width set to 0 */
+    transition: width 0.5s ease-in-out;
+}
+.header img {
+    display: inline-block;
+    width: 30px;
+    margin-right: 2px;
+}
+.header p {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+.header {
+    display: flex;
+}
