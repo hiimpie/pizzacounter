@@ -1,7 +1,9 @@
 <p align="center">
   <img src="pizza.png">
 </p>
+
 # Pizza Counter
+
 Using the power of ChatGPT I have crafted the most handful thing that ever existed ever...
 The Pizza Counter!
 
