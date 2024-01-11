@@ -7,6 +7,9 @@
 Using the power of ChatGPT I have crafted the most handful thing that ever existed ever...
 The Pizza Counter!
 
+What it does, is that it tracks your left mouse clicks and everytime you left click, it adds 20.
+The default progress bar goes to 100k but you can change that somewhere, I can't remember, will update when I do!
+
 # Installation n running the thing
 First of course you need python, if you dont got that, then im sorry but the rest is gonna be pointless for you.
 
