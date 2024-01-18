@@ -15,12 +15,11 @@ The progress bar is at line 35 and you would replace the value `100000` to the n
 First of course you need python, if you dont got that, then im sorry but the rest is gonna be pointless for you.
 
 Second we need to install somethings:
-`pip install flask`
-`pip install pynput`
-`pip install Thread`
-`pip install keyboard`
+Run `pip install -r requirements.txt`
 
 Okay, now go run the script!
+
+You should find the webserver on `https://127.0.0.1:5000/`
 
 To enable/disable the counter, press `p` for pizza.
 
